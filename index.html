@@ -6,19 +6,21 @@
     <title></title>
     <meta name="description" content="">
     <link rel="stylesheet" href="style.css">
-<style>    table {
-    border-collapse: collapse;
-    border: 2px solid rgb(200,200,200);
-    letter-spacing: 1px;
-    font-size: 0.8rem;
-  }
+    <style>
+        table {
+            border-collapse: collapse;
+            border: 2px solid rgb(200, 200, 200);
+            letter-spacing: 1px;
+            font-size: 0.8rem;
+        }
 
-  td, th {
-    border: 1px solid rgb(190,190,190);
-    padding: 10px 20px;
-  }
-  
-  .tooltip {
+        td,
+        th {
+            border: 1px solid rgb(190, 190, 190);
+            padding: 10px 20px;
+        }
+
+        .tooltip {
             position: relative;
             display: inline-block;
             border-bottom: 1px dotted black;
@@ -34,7 +36,8 @@
             padding: 5px;
             position: absolute;
             z-index: 1;
-            bottom: 125%; /* Position the tooltip above the text */
+            bottom: 125%;
+            /* Position the tooltip above the text */
             left: 50%;
             margin-left: -75px;
             opacity: 0;
@@ -45,7 +48,18 @@
             visibility: visible;
             opacity: 1;
         }
-        </style>
+
+        .tooltip:hover {
+            padding: 2px 6px;
+            /* Increased horizontal padding for more space */
+
+            background-color: #0056b3;
+            color: #fff;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+            transform: translateY(-3px);
+            /* Optional for a subtle lift effect */
+        }
+    </style>
 </head>
 
 <body>
@@ -53,21 +67,210 @@
         <tr>
             <th style="background-color: gray">ID</th>
 
-          <th style="background-color: gray">Texto</th>
+            <th style="background-color: gray">Texto</th>
 
-          <tr><td>0 </td><td> <div ><span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>Folifer,</span> <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>Folifer</span> 1/dia, <span class="tooltip"><span class="tooltiptext">Maltofer: ID: 1234 </span>Maltofer</span></div>    </td></tr>
-          <tr><td>1 </td><td> <div ><span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>Vacina da gripe,</span> <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>folifer,</span> <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span> yodafar,</span> <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>Darunavir,</span> <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>Ritonavir,</span> <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span> Emtricitabina+tenofovir</span> (medicada hospital xxxxxxxx), <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>Levetiracetam 500</span></div>    </td></tr>
-          <tr><td>2 </td><td> <div ><span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>Aldomet 250 2id,</span> <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>Folicil,</span> <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>iodo,</span> <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>AAS 100,</span> <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>Lovenox 40,</span> <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span> Venex,</span> <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>Venex 2id,</span> <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>ferro</span></div>    </td></tr>
-          <tr><td>3 </td><td> <div ><span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>ácido fólico</span>, <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>iodo</span>, <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>Nausefe</span>, <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>domperidona</span>, <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>Dermofix</span>, <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>vacina da gripe</span>, <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>magnésio</span>, <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>vacina anti- tosse convulsa.</span></div>    </td></tr>
-          <tr><td>4 </td><td> <div ><span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>Amlodipina 5 mg;</span> <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>AAS 100 mg;</span> <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>IOB9</span></div>    </td></tr>
-          <tr><td>5 </td><td> <div ><span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>Acfol </span>, <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>Yodafar</span>, <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>progefik</span>, <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>magnesio </span>, <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>magnesiocard 3id</span>, <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>biolectra mg,</span> <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>legofer</span></div>    </td></tr>
-          <tr><td>6 </td><td> <div ><span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>Symbicort 1x dia e em SOS,</span> <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>yodafar</span> , <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>folicil</span></div>    </td></tr>
-          <tr><td>7 </td><td> <div ><span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>Lovenox</span>, <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>Progeffik</span>, <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>Gestacare</span>, <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>Folifer</span>, <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>Yodafar</span>, <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>Kompensan</span>, <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>Mg</span></div>    </td></tr>
-          <tr><td>8 </td><td> <div ><span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>Cartia</span>, <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>Nausefe,</span> <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>IOB9,</span> <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span><span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>Metildopa 250 2 id</span>, <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>Magnesiocard</span>, <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>Natalben supra</span>, <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>Magnesio</span></div>    </td></tr>
-          <tr><td>9 </td><td> <div ><span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>nausefe</span>, <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>seretaide - 2x por dia;</span> <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>aerius;</span> <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>gestacare</span>, <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>avamys</span>,,  <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>Formoterol</span>  <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span> Budesonido 2id</span>   <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>Ventilan SOS,</span> <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>progeffik</span></div>    </td></tr>
-          <tr><td>10 </td><td> <div ><span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>Aripripazol 15 mg id</span></div>    </td></tr>
-          <tr><td>11 </td><td> <div ><span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>ferro-tardyferon fol;</span> <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>yodafar;</span> <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>paxium (clorodiazepóxido) 5mg (dias alternados manhã + 10mg noite);</span> <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>concor 2.5mg (1x dia)</span></div>    </td></tr>
-          <tr><td>12 </td><td> <div ><span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>Ig anti D xx/xx/xxxx,</span> <span class="tooltip"><span class="tooltiptext">Folifer: ID: 1234 </span>folifer 1x dia</span></div>    </td></tr>
+        <tr>
+            <td>1 </td>
+            <td>
+                <div><span class="tooltip"><span class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância
+                            Ativa/DCI: Ácido fólico + Ferro </span>Folifer,</span> <span class="tooltip"><span
+                            class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância Ativa/DCI: Ácido
+                            fólico + Ferro </span>Folifer</span> 1/dia, <span class="tooltip"><span
+                            class="tooltiptext">Maltofer <br> ID: 30639 <br> ATC: B03AB05 <br>Substância Ativa/DCI: Complexo hidróxido férrico-polimaltose                        </span>Maltofer</span></div>
+            </td>
+        </tr>
+        <tr>
+            <td>2 </td>
+            <td>
+                <div><span class="tooltip"><span class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância
+                            Ativa/DCI: Ácido fólico + Ferro </span>Vacina da gripe,</span> <span class="tooltip"><span
+                            class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância Ativa/DCI: Ácido
+                            fólico + Ferro </span>folifer,</span> <span class="tooltip"><span
+                            class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância Ativa/DCI: Ácido
+                            fólico + Ferro </span> yodafar,</span> <span class="tooltip"><span
+                            class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância Ativa/DCI: Ácido
+                            fólico + Ferro </span>Darunavir,</span> <span class="tooltip"><span
+                            class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância Ativa/DCI: Ácido
+                            fólico + Ferro </span>Ritonavir,</span> <span class="tooltip"><span
+                            class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância Ativa/DCI: Ácido
+                            fólico + Ferro </span> Emtricitabina+tenofovir</span> (medicada hospital xxxxxxxx), <span
+                        class="tooltip"><span class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância
+                            Ativa/DCI: Ácido fólico + Ferro </span>Levetiracetam 500</span></div>
+            </td>
+        </tr>
+        <tr>
+            <td>3 </td>
+            <td>
+                <div><span class="tooltip"><span class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância
+                            Ativa/DCI: Ácido fólico + Ferro </span>Aldomet 250 2id,</span> <span class="tooltip"><span
+                            class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância Ativa/DCI: Ácido
+                            fólico + Ferro </span>Folicil,</span> <span class="tooltip"><span
+                            class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância Ativa/DCI: Ácido
+                            fólico + Ferro </span>iodo,</span> <span class="tooltip"><span class="tooltiptext">Folifer:
+                            ID: 3601 <br> ATC: B03AD03 <br>Substância Ativa/DCI: Ácido fólico + Ferro </span>AAS
+                        100,</span> <span class="tooltip"><span class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03
+                            <br>Substância Ativa/DCI: Ácido fólico + Ferro </span>Lovenox 40,</span> <span
+                        class="tooltip"><span class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância
+                            Ativa/DCI: Ácido fólico + Ferro </span> Venex,</span> <span class="tooltip"><span
+                            class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância Ativa/DCI: Ácido
+                            fólico + Ferro </span>Venex 2id,</span> <span class="tooltip"><span
+                            class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância Ativa/DCI: Ácido
+                            fólico + Ferro </span>ferro</span></div>
+            </td>
+        </tr>
+        <tr>
+            <td>4 </td>
+            <td>
+                <div><span class="tooltip"><span class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância
+                            Ativa/DCI: Ácido fólico + Ferro </span>ácido fólico</span>, <span class="tooltip"><span
+                            class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância Ativa/DCI: Ácido
+                            fólico + Ferro </span>iodo</span>, <span class="tooltip"><span class="tooltiptext">Folifer:
+                            ID: 3601 <br> ATC: B03AD03 <br>Substância Ativa/DCI: Ácido fólico + Ferro
+                        </span>Nausefe</span>, <span class="tooltip"><span class="tooltiptext">Produto: Folifer <br> ID: 3601 <br>
+                            ATC: B03AD03 <br>Substância Ativa/DCI: Ácido fólico + Ferro </span>domperidona</span>, <span
+                        class="tooltip"><span class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância
+                            Ativa/DCI: Ácido fólico + Ferro </span>Dermofix</span>, <span class="tooltip"><span
+                            class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância Ativa/DCI: Ácido
+                            fólico + Ferro </span>vacina da gripe</span>, <span class="tooltip"><span
+                            class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância Ativa/DCI: Ácido
+                            fólico + Ferro </span>magnésio</span>, <span class="tooltip"><span
+                            class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância Ativa/DCI: Ácido
+                            fólico + Ferro </span>vacina anti- tosse convulsa.</span></div>
+            </td>
+        </tr>
+        <tr>
+            <td>5 </td>
+            <td>
+                <div><span class="tooltip"><span class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância
+                            Ativa/DCI: Ácido fólico + Ferro </span>Amlodipina 5 mg;</span> <span class="tooltip"><span
+                            class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância Ativa/DCI: Ácido
+                            fólico + Ferro </span>AAS 100 mg;</span> <span class="tooltip"><span
+                            class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância Ativa/DCI: Ácido
+                            fólico + Ferro </span>IOB9</span></div>
+            </td>
+        </tr>
+        <tr>
+            <td>6 </td>
+            <td>
+                <div><span class="tooltip"><span class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância
+                            Ativa/DCI: Ácido fólico + Ferro </span>Acfol </span>, <span class="tooltip"><span
+                            class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância Ativa/DCI: Ácido
+                            fólico + Ferro </span>Yodafar</span>, <span class="tooltip"><span
+                            class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância Ativa/DCI: Ácido
+                            fólico + Ferro </span>progefik</span>, <span class="tooltip"><span
+                            class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância Ativa/DCI: Ácido
+                            fólico + Ferro </span>magnesio </span>, <span class="tooltip"><span
+                            class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância Ativa/DCI: Ácido
+                            fólico + Ferro </span>magnesiocard 3id</span>, <span class="tooltip"><span
+                            class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância Ativa/DCI: Ácido
+                            fólico + Ferro </span>biolectra mg,</span> <span class="tooltip"><span
+                            class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância Ativa/DCI: Ácido
+                            fólico + Ferro </span>legofer</span></div>
+            </td>
+        </tr>
+        <tr>
+            <td>7 </td>
+            <td>
+                <div><span class="tooltip"><span class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância
+                            Ativa/DCI: Ácido fólico + Ferro </span>Symbicort 1x dia e em SOS,</span> <span
+                        class="tooltip"><span class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância
+                            Ativa/DCI: Ácido fólico + Ferro </span>yodafar</span> , <span class="tooltip"><span
+                            class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância Ativa/DCI: Ácido
+                            fólico + Ferro </span>folicil</span></div>
+            </td>
+        </tr>
+        <tr>
+            <td>8 </td>
+            <td>
+                <div><span class="tooltip"><span class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância
+                            Ativa/DCI: Ácido fólico + Ferro </span>Lovenox</span>, <span class="tooltip"><span
+                            class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância Ativa/DCI: Ácido
+                            fólico + Ferro </span>Progeffik</span>, <span class="tooltip"><span
+                            class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância Ativa/DCI: Ácido
+                            fólico + Ferro </span>Gestacare</span>, <span class="tooltip"><span
+                            class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância Ativa/DCI: Ácido
+                            fólico + Ferro </span>Folifer</span>, <span class="tooltip"><span
+                            class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância Ativa/DCI: Ácido
+                            fólico + Ferro </span>Yodafar</span>, <span class="tooltip"><span
+                            class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância Ativa/DCI: Ácido
+                            fólico + Ferro </span>Kompensan</span>, <span class="tooltip"><span
+                            class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância Ativa/DCI: Ácido
+                            fólico + Ferro </span>Mg</span></div>
+            </td>
+        </tr>
+        <tr>
+            <td>9 </td>
+            <td>
+                <div><span class="tooltip"><span class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância
+                            Ativa/DCI: Ácido fólico + Ferro </span>Cartia</span>, <span class="tooltip"><span
+                            class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância Ativa/DCI: Ácido
+                            fólico + Ferro </span>Nausefe,</span> <span class="tooltip"><span
+                            class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância Ativa/DCI: Ácido
+                            fólico + Ferro </span>IOB9,</span> <span class="tooltip"><span class="tooltiptext">Folifer:
+                            ID: 3601 <br> ATC: B03AD03 <br>Substância Ativa/DCI: Ácido fólico + Ferro </span><span
+                            class="tooltip"><span class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância
+                                Ativa/DCI: Ácido fólico + Ferro </span>Metildopa 250 2 id</span>, <span
+                            class="tooltip"><span class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância
+                                Ativa/DCI: Ácido fólico + Ferro </span>Magnesiocard</span>, <span class="tooltip"><span
+                                class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância Ativa/DCI: Ácido
+                                fólico + Ferro </span>Natalben supra</span>, <span class="tooltip"><span
+                                class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância Ativa/DCI: Ácido
+                                fólico + Ferro </span>Magnesio</span></div>
+            </td>
+        </tr>
+        <tr>
+            <td>10 </td>
+            <td>
+                <div><span class="tooltip"><span class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância
+                            Ativa/DCI: Ácido fólico + Ferro </span>nausefe</span>, <span class="tooltip"><span
+                            class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância Ativa/DCI: Ácido
+                            fólico + Ferro </span>seretaide - 2x por dia;</span> <span class="tooltip"><span
+                            class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância Ativa/DCI: Ácido
+                            fólico + Ferro </span>aerius;</span> <span class="tooltip"><span
+                            class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância Ativa/DCI: Ácido
+                            fólico + Ferro </span>gestacare</span>, <span class="tooltip"><span
+                            class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância Ativa/DCI: Ácido
+                            fólico + Ferro </span>avamys</span>,, <span class="tooltip"><span
+                            class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância Ativa/DCI: Ácido
+                            fólico + Ferro </span>Formoterol</span> <span class="tooltip"><span
+                            class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância Ativa/DCI: Ácido
+                            fólico + Ferro </span> Budesonido 2id</span> <span class="tooltip"><span
+                            class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância Ativa/DCI: Ácido
+                            fólico + Ferro </span>Ventilan SOS,</span> <span class="tooltip"><span
+                            class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância Ativa/DCI: Ácido
+                            fólico + Ferro </span>progeffik</span></div>
+            </td>
+        </tr>
+        <tr>
+            <td>11 </td>
+            <td>
+                <div><span class="tooltip"><span class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância
+                            Ativa/DCI: Ácido fólico + Ferro </span>Aripripazol 15 mg id</span></div>
+            </td>
+        </tr>
+        <tr>
+            <td>12 </td>
+            <td>
+                <div><span class="tooltip"><span class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância
+                            Ativa/DCI: Ácido fólico + Ferro </span>ferro-tardyferon fol;</span> <span
+                        class="tooltip"><span class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância
+                            Ativa/DCI: Ácido fólico + Ferro </span>yodafar;</span> <span class="tooltip"><span
+                            class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância Ativa/DCI: Ácido
+                            fólico + Ferro </span>paxium (clorodiazepóxido) 5mg (dias alternados manhã + 10mg
+                        noite);</span> <span class="tooltip"><span class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC:
+                            B03AD03 <br>Substância Ativa/DCI: Ácido fólico + Ferro </span>concor 2.5mg (1x dia)</span>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>13 </td>
+            <td>
+                <div><span class="tooltip"><span class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância
+                            Ativa/DCI: Ácido fólico + Ferro </span>Ig anti D xx/xx/xxxx,</span> <span
+                        class="tooltip"><span class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância
+                            Ativa/DCI: Ácido fólico + Ferro </span>folifer 1x dia</span></div>
+            </td>
+        </tr>
     </table>
 </body>
 
