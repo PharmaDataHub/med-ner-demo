@@ -4,86 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
-    <meta name="description" content="">
+    <meta name="Entity Recognition" content="">
     <link rel="stylesheet" href="style.css">
-    <style>
-        header {
-            width: 100%;
-            background-color: #333;
-            padding: 4px 0px;
 
-            color: white;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        header p {
-            margin: 0;
-            flex: 1;
-            padding-left: 20px;
-            text-align: left;
-        }
-
-        header div {
-            display: flex;
-            align-items: center;
-            width: 100%;
-        }
-
-        table {
-            border-collapse: collapse;
-            border: 2px solid rgb(200, 200, 200);
-            letter-spacing: 1px;
-            font-size: 0.8rem;
-        }
-
-        td,
-        th {
-            border: 1px solid rgb(190, 190, 190);
-            padding: 10px 20px;
-        }
-
-        .tooltip {
-            position: relative;
-            display: inline-block;
-            border-bottom: 1px dotted black;
-        }
-
-        .tooltip .tooltiptext {
-            visibility: hidden;
-            width: 150px;
-            background-color: #555;
-            color: #fff;
-            text-align: center;
-            border-radius: 5px;
-            padding: 5px;
-            position: absolute;
-            z-index: 1;
-            bottom: 125%;
-            /* Position the tooltip above the text */
-            left: 50%;
-            margin-left: -75px;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        .tooltip:hover .tooltiptext {
-            visibility: visible;
-            opacity: 1;
-        }
-
-        .tooltip:hover {
-            padding: 2px 6px;
-            /* Increased horizontal padding for more space */
-
-            background-color: #0056b3;
-            color: #fff;
-            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
-            transform: translateY(-3px);
-            /* Optional for a subtle lift effect */
-        }
-    </style>
 </head>
 
 <body>
@@ -96,11 +19,12 @@
         </div>
     </header>
     <br>
-    <table>
+    <div class="table-container">
+    <table class="center-table">
         <tr>
-            <th style="color:white; background-color: rgb(51, 103, 51)">ID</th>
+            <th>ID</th>
 
-            <th style="color:white; background-color:rgb(51, 103, 51)">Texto</th>
+            <th>Texto</th>
         </tr>
 
         <tr>
@@ -111,7 +35,7 @@
                             Ativa/DCI: Ácido fólico + Ferro </span>Folifer,</span> <span class="tooltip"><span
                             class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância
                             Ativa/DCI: Ácido
-                            fólico + Ferro </span>Folifer</span> 1/dia, <span class="tooltip"><span
+                            fólico + Ferro </span>Folifer 1/dia,</span>  <span class="tooltip"><span
                             class="tooltiptext">Maltofer <br> ID: 30639 <br> ATC: B03AB05 <br>Substância Ativa/DCI:
                             Complexo hidróxido férrico-polimaltose </span>Maltofer</span></div>
             </td>
@@ -242,8 +166,8 @@
             <td>
                 <div><span class="tooltip"><span class="tooltiptext">Produto: Nausefe <br> ID: 5915<br>
                     ATC: A04AD <br>Substância Ativa/DCI: Doxilamina + Dicloverina + Piridoxina </span>nausefe</span>, <span class="tooltip"><span
-                            class="tooltiptext">Produto: - <br> ID: - <br> ATC: B03AD03 <br>Substância
-                            Ativa/DCI: - </span>seretaide - 2x por dia;</span> <span class="tooltip"><span
+                            class="tooltiptext">Produto: Seretaide <br> ID: - <br> ATC: R03AK06 <br>Substância
+                            Ativa/DCI: Fluticasona + Salmeterol	 </span>seretaide - 2x por dia;</span> <span class="tooltip"><span
                             class="tooltiptext">Produto: - <br> ID: - <br> ATC: B03AD03 <br>Substância
                             Ativa/DCI: Desloratadina </span>aerius;</span> <span class="tooltip"><span
                             class="tooltiptext">Produto: - <br> ID: - <br> ATC: - <br>Substância
@@ -289,6 +213,7 @@
             </td>
         </tr>
     </table>
+</div>
 </body>
 
 </html>
