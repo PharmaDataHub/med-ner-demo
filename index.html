@@ -3,217 +3,323 @@
 
 <head>
     <meta charset="UTF-8">
-    <title></title>
-    <meta name="Entity Recognition" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Entity Recognition Demo</title>
+    <meta name="description" content="Named Entity Recognition for Medical Terminology">
     <link rel="stylesheet" href="style.css">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
-    <header>
-        <div>
-            <p>This is a real transformation of real data into strucutred medication information based on Natural
-                Language Process and terminology binding.</p>
-
-        </div>
-    </header>
-    <br>
-    <div class="table-container">
-    <table class="center-table">
-        <tr>
-            <th>ID</th>
-
-            <th>Texto</th>
-        </tr>
-
-        <tr>
-            <td>1 </td>
-            <td>
-                <div><span class="tooltip"><span class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03
-                            <br>Substância
-                            Ativa/DCI: Ácido fólico + Ferro </span>Folifer,</span> <span class="tooltip"><span
-                            class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância
-                            Ativa/DCI: Ácido
-                            fólico + Ferro </span>Folifer 1/dia,</span>  <span class="tooltip"><span
-                            class="tooltiptext">Maltofer <br> ID: 30639 <br> ATC: B03AB05 <br>Substância Ativa/DCI:
-                            Complexo hidróxido férrico-polimaltose </span>Maltofer</span></div>
-            </td>
-        </tr>
-        <tr>
-            <td>2 </td>
-            <td>
-                <div><span class="tooltip"><span class="tooltiptext">Produto: - <br> ID:  <br> ATC: J07BB02
-                            <br>Substância
-                            Ativa/DCI: Vacina contra a gripe</span>Vacina da gripe,</span> <span class="tooltip"><span
-                            class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03 <br>Substância
-                            Ativa/DCI: Ácido
-                            fólico + Ferro </span>folifer,</span> <span class="tooltip"><span
-                            class="tooltiptext">Produto: Yodafar <br> ID: 56433 <br> ATC: H03CA <br>Substância
-                            Ativa/DCI: Iodeto de potássio </span> yodafar,</span> <span class="tooltip"><span
-                            class="tooltiptext">Produto: - <br> ID: - <br> ATC: J05AE10 <br>Substância
-                            Ativa/DCI: Darunavir </span>Darunavir,</span> <span class="tooltip"><span
-                            class="tooltiptext">Produto: - <br> ID: - <br> ATC: J05AE03 <br>Substância
-                            Ativa/DCI: Ritonavir </span>Ritonavir,</span> <span class="tooltip"><span
-                            class="tooltiptext">Produto: - <br> ID: - <br> ATC: J05AR03 <br>Substância
-                            Ativa/DCI: Emtricitabina + Tenofovir</span> Emtricitabina+tenofovir</span> (medicada
-                    hospital xxxxxxxx), <span class="tooltip"><span class="tooltiptext">Produto: - <br> ID: - <br> ATC:
-                            N03AX14
-                            <br>Substância
-                            Ativa/DCI: Levetiracetam </span>Levetiracetam 500</span></div>
-            </td>
-        </tr>
-        <tr>
-            <td>3 </td>
-            <td>
-                <div><span class="tooltip"><span class="tooltiptext">Produto: Aldomet <br> ID: 202 <br> ATC: C02AB02
-                            <br>Substância
-                            Ativa/DCI: Metildopa </span>Aldomet 250 2id,</span> <span class="tooltip"><span
-                            class="tooltiptext">Produto: Folicil <br> ID: 3600 <br> ATC: B03BB01 <br>Substância
-                            Ativa/DCI: Ácido
-                            fólico </span>Folicil,</span> <span class="tooltip"><span class="tooltiptext">Produto: -
-                            <br> ID: - <br> ATC: H03CA <br>Substância
-                            Ativa/DCI: Iodeto de potássio</span>iodo,</span> <span class="tooltip"><span
-                            class="tooltiptext">Produto: - <br> ID: - <br><br> ATC: B03AD03 <br>Substância Ativa/DCI:
-                            Ácido fólico + Ferro </span>AAS
-                        100,</span> <span class="tooltip"><span class="tooltiptext">Produto: Lovenox 40 mg/0.4 ml<br>
-                            ID: 5225 <br>
-                            ATC: B01AB05
-                            <br>Substância Ativa/DCI: Enoxaparina sódica</span>Lovenox 40,</span> <span
-                        class="tooltip"><span class="tooltiptext">Produto: Venex <br> ID: 9056 <br> ATC: C05CA03
-                            <br>Substância
-                            Ativa/DCI: Diosmina </span> Venex,</span> <span class="tooltip"><span
-                            class="tooltiptext">Produto: Venex <br> ID: 9056 <br> ATC: C05CA03 <br>Substância
-                            Ativa/DCI: Diosmina</span>Venex 2id,</span> <span class="tooltip"><span
-                            class="tooltiptext">Produto: - <br> ID: - <br> ATC: B03AB10 <br>Substância
-                            Ativa/DCI: Ferro </span>ferro</span></div>
-            </td>
-        </tr>
-        <tr>
-            <td>4 </td>
-            <td>
-                <div><span class="tooltip"><span class="tooltiptext">Produto: - <br> ID: - <br> ATC: B03BB01
-                            <br>Substância
-                            Ativa/DCI: Ácido
-                            fólico </span>ácido fólico</span>, <span class="tooltip"><span class="tooltiptext">Produto:
-                            - <br> ID: - <br> ATC: H03CA <br>Substância
-                            Ativa/DCI: Iodeto de potássio </span>iodo</span>, <span class="tooltip"><span
-                            class="tooltiptext">Produto: Nausefe <br> ID: 5915<br>
-                            ATC: A04AD <br>Substância Ativa/DCI: Doxilamina + Dicloverina + Piridoxina
-                        </span>Nausefe</span>, <span class="tooltip"><span class="tooltiptext">Produto: - <br> ID:
-                            - <br>
-                            ATC: A03FA03 <br>Substância Ativa/DCI: Domperidona </span>domperidona</span>, <span
-                        class="tooltip"><span class="tooltiptext">Produto: Dermofix <br> ID: - <br> ATC: G01AF
-                            <br>Substância
-                            Ativa/DCI: Sertaconazol </span>Dermofix</span>, <span class="tooltip"><span
-                            class="tooltiptext">Produto: - <br> ID: - <br> ATC: J07BB02 <br>Substância
-                            Ativa/DCI: Vacina contra a gripe </span>vacina da gripe</span>, <span class="tooltip"><span
-                            class="tooltiptext">Produto: - <br> ID: - <br> ATC: B03AD03 <br>Substância
-                            Ativa/DCI: Magnésio </span>magnésio</span>, <span class="tooltip"><span
-                            class="tooltiptext">Produto: - <br> ID: - <br> ATC: - <br>Substância
-                            Ativa/DCI: -</span>vacina anti- tosse convulsa.</span></div>
-            </td>
-        </tr>
-        <tr>
-            <td>5 </td>
-            <td>
-                <div><span class="tooltip"><span class="tooltiptext">Produto: - <br> ID: - <br> ATC: C08CA01
-                            <br>Substância
-                            Ativa/DCI: Amlodipina </span>Amlodipina 5 mg;</span> <span class="tooltip"><span
-                            class="tooltiptext">Produto: - <br> ID: - <br> ATC: B03AD03 <br>Substância
-                            Ativa/DCI: Ácido acetilsalicílico </span>AAS 100 mg;</span> <span class="tooltip"><span
-                            class="tooltiptext">Produto: - <br> ID: - <br> ATC: - <br>Substância
-                            Ativa/DCI: Iodeto de potássio e Ácido fólico </span>IOB9</span></div>
-            </td>
-        </tr>
-        <tr>
-            <td>6 </td>
-            <td>
-                <div><span class="tooltip"><span class="tooltiptext">Produto: Acfol <br> ID: 24 <br> ATC: B03BB01
-                            <br>Substância
-                            Ativa/DCI: Ácido fólico </span>Acfol </span>, <span class="tooltip"><span
-                            class="tooltiptext">Produto: Yodafar <br> ID: 56433 <br> ATC: H03CA <br>Substância
-                            Ativa/DCI: Iodeto de potássio </span>Yodafar</span>, <span class="tooltip"><span
-                            class="tooltiptext">Produto: Progeffik MG<br> ID: - <br> ATC: G03DA04 <br>Substância
-                            Ativa/DCI: Progesterona </span>progefik</span>, <span class="tooltip"><span
-                            class="tooltiptext">Produto: - <br> ID: - <br> ATC: B05XA05 <br>Substância
-                            Ativa/DCI: Magnésio </span>magnesio </span>, <span class="tooltip"><span
-                            class="tooltiptext">Produto: Magnesiocard <br> ID: 5280 <br> ATC: B05XA05 <br>Substância
-                            Ativa/DCI:  Aspartato de magnésio </span>magnesiocard 3id</span>, <span class="tooltip"><span
-                            class="tooltiptext">Produto: -<br> ID: - <br> ATC: B05XA05 <br>Substância
-                            Ativa/DCI: Magnésio </span>biolectra mg,</span> <span class="tooltip"><span
-                            class="tooltiptext">Produto: Legofer <br> ID: 4949 <br> ATC: B03AD03 <br>Substância
-                            Ativa/DCI: Proteínosuccinilato de ferro </span>legofer</span></div>
-            </td>
-        </tr>
-        <tr>
-            <td>7 </td>
-            <td>
-                <div><span class="tooltip"><span class="tooltiptext">Produto: Symbicort <br> ID: - <br> ATC: R03AK07
-                            <br>Substância
-                            Ativa/DCI: Budesonida + Formoterol </span>Symbicort 1x dia e em SOS,</span> <span
-                        class="tooltip"><span class="tooltiptext">Produto: Yodafar <br> ID: 56433 <br> ATC: H03CA <br>Substância
-                            Ativa/DCI: Iodeto de potássio </span>yodafar</span> , <span class="tooltip"><span
-                            class="tooltiptext">Produto: Folicil <br> ID: 3600 <br> ATC: B03BB01 <br>Substância
-                            Ativa/DCI: Ácido
-                            fólico </span>folicil</span></div>
-            </td>
-        </tr>
-
-
-        <tr>
-            <td>8</td>
-            <td>
-                <div><span class="tooltip"><span class="tooltiptext">Produto: Nausefe <br> ID: 5915<br>
-                    ATC: A04AD <br>Substância Ativa/DCI: Doxilamina + Dicloverina + Piridoxina </span>nausefe</span>, <span class="tooltip"><span
-                            class="tooltiptext">Produto: Seretaide <br> ID: - <br> ATC: R03AK06 <br>Substância
-                            Ativa/DCI: Fluticasona + Salmeterol	 </span>seretaide - 2x por dia;</span> <span class="tooltip"><span
-                            class="tooltiptext">Produto: - <br> ID: - <br> ATC: B03AD03 <br>Substância
-                            Ativa/DCI: Desloratadina </span>aerius;</span> <span class="tooltip"><span
-                            class="tooltiptext">Produto: - <br> ID: - <br> ATC: - <br>Substância
-                            Ativa/DCI: -</span>gestacare</span>, <span class="tooltip"><span
-                            class="tooltiptext">Produto: Avamys <br> ID: 42630 <br> ATC: R01AD12 <br>Substância
-                            Ativa/DCI: Furoato de fluticasona </span>avamys</span>,, <span class="tooltip"><span
-                            class="tooltiptext">Produto: - <br> ID: - <br> ATC: R03AC13 <br>Substância
-                            Ativa/DCI: Formoterol </span>Formoterol</span> <span class="tooltip"><span
-                            class="tooltiptext">Produto: - <br> ID: - <br> ATC: A07EA06 <br>Substância
-                            Ativa/DCI: Budesonida </span> Budesonido 2id</span> <span class="tooltip"><span
-                            class="tooltiptext">Produto: Ventilan <br> ID: - <br> ATC: R03AC02 <br>Substância
-                            Ativa/DCI: Salbutamol </span>Ventilan SOS,</span> <span class="tooltip"><span
-                            class="tooltiptext">Produto: Progeffik MG<br> ID: - <br> ATC: G03DA04 <br>Substância
-                            Ativa/DCI: Progesterona  </span>progeffik</span></div>
-            </td>
-        </tr>
-        <tr>
-
-        <td>9 </td>
-        <td>
-            <div><span class="tooltip"><span class="tooltiptext">Produto: Ferro-Tardyferon Fol <br> ID: 8286 <br> ATC: B03AD03
-                        <br>Substância
-                        Ativa/DCI: Sulfato ferroso + Ácido fólico</span>ferro-tardyferon fol;</span> <span class="tooltip"><span
-                        class="tooltiptext">Produto: Yodafar <br> ID: 56433 <br> ATC: H03CA <br>Substância
-                        Ativa/DCI: Iodeto de potássio</span>yodafar;</span> <span class="tooltip"><span
-                        class="tooltiptext">Produto: Paxium <br> ID: - <br> ATC: N05BA02 <br>Substância
-                        Ativa/DCI: Clorodiazepóxido </span>paxium (clorodiazepóxido) 5mg (dias alternados manhã + 10mg
-                    noite);</span> <span class="tooltip"><span class="tooltiptext">Produto: Concor IC <br> ID: 19214
-                        <br> ATC:
-                        C07AB07 <br>Substância Ativa/DCI: Bisoprolol </span>concor 2.5mg (1x dia)</span>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <div class="logo">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                        <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <span>MedNER</span>
+                </div>
+                <h1>Medical Entity Recognition</h1>
+                <p class="subtitle">Real-world transformation of free-text clinical data into structured medication
+                    information using Natural Language Processing and terminology binding.</p>
             </div>
-        </td>
-        </tr>
-        <tr>
-            <td>10 </td>
-            <td>
-                <div><span class="tooltip"><span class="tooltiptext">Produto: - <br> ID: - <br> ATC: -
-                            <br>Substância
-                            Ativa/DCI: - </span>Ig anti D xx/xx/xxxx,</span> <span
-                        class="tooltip"><span class="tooltiptext">Produto: Folifer <br> ID: 3601 <br> ATC: B03AD03
-                            <br>Substância
-                            Ativa/DCI: Ácido fólico + Ferro </span>folifer 1x dia</span></div>
-            </td>
-        </tr>
-    </table>
-</div>
+        </header>
+
+        <main>
+            <div class="info-banner">
+                <div class="info-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                        <path d="M12 16V12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        <circle cx="12" cy="8" r="1" fill="currentColor" />
+                    </svg>
+                </div>
+                <span>Hover over highlighted medications to see detailed terminology information including ATC codes and
+                    active substances.</span>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="id-col">ID</th>
+                            <th>Clinical Text</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td class="id-col">1</td>
+                            <td>
+                                <div class="text-content"><span class="med-tag"><span
+                                            class="tooltip-content"><strong>Produto:</strong>
+                                            Folifer<br><strong>ID:</strong> 3601<br><strong>ATC:</strong>
+                                            B03AD03<br><strong>Substância Ativa/DCI:</strong> Ácido fólico +
+                                            Ferro</span>Folifer,</span> <span class="med-tag"><span
+                                            class="tooltip-content"><strong>Produto:</strong>
+                                            Folifer<br><strong>ID:</strong> 3601<br><strong>ATC:</strong>
+                                            B03AD03<br><strong>Substância Ativa/DCI:</strong> Ácido fólico +
+                                            Ferro</span>Folifer 1/dia,</span> <span class="med-tag"><span
+                                            class="tooltip-content"><strong>Produto:</strong>
+                                            Maltofer<br><strong>ID:</strong> 30639<br><strong>ATC:</strong>
+                                            B03AB05<br><strong>Substância Ativa/DCI:</strong> Complexo hidróxido
+                                            férrico-polimaltose</span>Maltofer</span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="id-col">2</td>
+                            <td>
+                                <div class="text-content"><span class="med-tag"><span
+                                            class="tooltip-content"><strong>Produto:</strong> -<br><strong>ID:</strong>
+                                            -<br><strong>ATC:</strong> J07BB02<br><strong>Substância Ativa/DCI:</strong>
+                                            Vacina contra a gripe</span>Vacina da gripe,</span> <span
+                                        class="med-tag"><span class="tooltip-content"><strong>Produto:</strong>
+                                            Folifer<br><strong>ID:</strong> 3601<br><strong>ATC:</strong>
+                                            B03AD03<br><strong>Substância Ativa/DCI:</strong> Ácido fólico +
+                                            Ferro</span>folifer,</span> <span class="med-tag"><span
+                                            class="tooltip-content"><strong>Produto:</strong>
+                                            Yodafar<br><strong>ID:</strong> 56433<br><strong>ATC:</strong>
+                                            H03CA<br><strong>Substância Ativa/DCI:</strong> Iodeto de
+                                            potássio</span>yodafar,</span> <span class="med-tag"><span
+                                            class="tooltip-content"><strong>Produto:</strong> -<br><strong>ID:</strong>
+                                            -<br><strong>ATC:</strong> J05AE10<br><strong>Substância Ativa/DCI:</strong>
+                                            Darunavir</span>Darunavir,</span> <span class="med-tag"><span
+                                            class="tooltip-content"><strong>Produto:</strong> -<br><strong>ID:</strong>
+                                            -<br><strong>ATC:</strong> J05AE03<br><strong>Substância Ativa/DCI:</strong>
+                                            Ritonavir</span>Ritonavir,</span> <span class="med-tag"><span
+                                            class="tooltip-content"><strong>Produto:</strong> -<br><strong>ID:</strong>
+                                            -<br><strong>ATC:</strong> J05AR03<br><strong>Substância Ativa/DCI:</strong>
+                                            Emtricitabina + Tenofovir</span>Emtricitabina+tenofovir</span> (medicada
+                                    hospital xxxxxxxx), <span class="med-tag"><span
+                                            class="tooltip-content"><strong>Produto:</strong> -<br><strong>ID:</strong>
+                                            -<br><strong>ATC:</strong> N03AX14<br><strong>Substância Ativa/DCI:</strong>
+                                            Levetiracetam</span>Levetiracetam 500</span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="id-col">3</td>
+                            <td>
+                                <div class="text-content"><span class="med-tag"><span
+                                            class="tooltip-content"><strong>Produto:</strong>
+                                            Aldomet<br><strong>ID:</strong> 202<br><strong>ATC:</strong>
+                                            C02AB02<br><strong>Substância Ativa/DCI:</strong> Metildopa</span>Aldomet
+                                        250 2id,</span> <span class="med-tag"><span
+                                            class="tooltip-content"><strong>Produto:</strong>
+                                            Folicil<br><strong>ID:</strong> 3600<br><strong>ATC:</strong>
+                                            B03BB01<br><strong>Substância Ativa/DCI:</strong> Ácido
+                                            fólico</span>Folicil,</span> <span class="med-tag"><span
+                                            class="tooltip-content"><strong>Produto:</strong> -<br><strong>ID:</strong>
+                                            -<br><strong>ATC:</strong> H03CA<br><strong>Substância Ativa/DCI:</strong>
+                                            Iodeto de potássio</span>iodo,</span> <span class="med-tag"><span
+                                            class="tooltip-content"><strong>Produto:</strong> -<br><strong>ID:</strong>
+                                            -<br><strong>ATC:</strong> B03AD03<br><strong>Substância Ativa/DCI:</strong>
+                                            Ácido fólico + Ferro</span>AAS 100,</span> <span class="med-tag"><span
+                                            class="tooltip-content"><strong>Produto:</strong> Lovenox 40 mg/0.4
+                                            ml<br><strong>ID:</strong> 5225<br><strong>ATC:</strong>
+                                            B01AB05<br><strong>Substância Ativa/DCI:</strong> Enoxaparina
+                                            sódica</span>Lovenox 40,</span> <span class="med-tag"><span
+                                            class="tooltip-content"><strong>Produto:</strong>
+                                            Venex<br><strong>ID:</strong> 9056<br><strong>ATC:</strong>
+                                            C05CA03<br><strong>Substância Ativa/DCI:</strong>
+                                            Diosmina</span>Venex,</span> <span class="med-tag"><span
+                                            class="tooltip-content"><strong>Produto:</strong>
+                                            Venex<br><strong>ID:</strong> 9056<br><strong>ATC:</strong>
+                                            C05CA03<br><strong>Substância Ativa/DCI:</strong> Diosmina</span>Venex
+                                        2id,</span> <span class="med-tag"><span
+                                            class="tooltip-content"><strong>Produto:</strong> -<br><strong>ID:</strong>
+                                            -<br><strong>ATC:</strong> B03AB10<br><strong>Substância Ativa/DCI:</strong>
+                                            Ferro</span>ferro</span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="id-col">4</td>
+                            <td>
+                                <div class="text-content"><span class="med-tag"><span
+                                            class="tooltip-content"><strong>Produto:</strong> -<br><strong>ID:</strong>
+                                            -<br><strong>ATC:</strong> B03BB01<br><strong>Substância Ativa/DCI:</strong>
+                                            Ácido fólico</span>ácido fólico</span>, <span class="med-tag"><span
+                                            class="tooltip-content"><strong>Produto:</strong> -<br><strong>ID:</strong>
+                                            -<br><strong>ATC:</strong> H03CA<br><strong>Substância Ativa/DCI:</strong>
+                                            Iodeto de potássio</span>iodo</span>, <span class="med-tag"><span
+                                            class="tooltip-content"><strong>Produto:</strong>
+                                            Nausefe<br><strong>ID:</strong> 5915<br><strong>ATC:</strong>
+                                            A04AD<br><strong>Substância Ativa/DCI:</strong> Doxilamina + Dicloverina +
+                                            Piridoxina</span>Nausefe</span>, <span class="med-tag"><span
+                                            class="tooltip-content"><strong>Produto:</strong> -<br><strong>ID:</strong>
+                                            -<br><strong>ATC:</strong> A03FA03<br><strong>Substância Ativa/DCI:</strong>
+                                            Domperidona</span>domperidona</span>, <span class="med-tag"><span
+                                            class="tooltip-content"><strong>Produto:</strong>
+                                            Dermofix<br><strong>ID:</strong> -<br><strong>ATC:</strong>
+                                            G01AF<br><strong>Substância Ativa/DCI:</strong>
+                                            Sertaconazol</span>Dermofix</span>, <span class="med-tag"><span
+                                            class="tooltip-content"><strong>Produto:</strong> -<br><strong>ID:</strong>
+                                            -<br><strong>ATC:</strong> J07BB02<br><strong>Substância Ativa/DCI:</strong>
+                                            Vacina contra a gripe</span>vacina da gripe</span>, <span
+                                        class="med-tag"><span class="tooltip-content"><strong>Produto:</strong>
+                                            -<br><strong>ID:</strong> -<br><strong>ATC:</strong>
+                                            B03AD03<br><strong>Substância Ativa/DCI:</strong>
+                                            Magnésio</span>magnésio</span>, <span class="med-tag unrecognized"><span
+                                            class="tooltip-content"><strong>Produto:</strong> -<br><strong>ID:</strong>
+                                            -<br><strong>ATC:</strong> -<br><strong>Substância Ativa/DCI:</strong>
+                                            -</span>vacina anti-tosse convulsa.</span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="id-col">5</td>
+                            <td>
+                                <div class="text-content"><span class="med-tag"><span
+                                            class="tooltip-content"><strong>Produto:</strong> -<br><strong>ID:</strong>
+                                            -<br><strong>ATC:</strong> C08CA01<br><strong>Substância Ativa/DCI:</strong>
+                                            Amlodipina</span>Amlodipina 5 mg;</span> <span class="med-tag"><span
+                                            class="tooltip-content"><strong>Produto:</strong> -<br><strong>ID:</strong>
+                                            -<br><strong>ATC:</strong> B03AD03<br><strong>Substância Ativa/DCI:</strong>
+                                            Ácido acetilsalicílico</span>AAS 100 mg;</span> <span class="med-tag"><span
+                                            class="tooltip-content"><strong>Produto:</strong> -<br><strong>ID:</strong>
+                                            -<br><strong>ATC:</strong> -<br><strong>Substância Ativa/DCI:</strong>
+                                            Iodeto de potássio e Ácido fólico</span>IOB9</span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="id-col">6</td>
+                            <td>
+                                <div class="text-content"><span class="med-tag"><span
+                                            class="tooltip-content"><strong>Produto:</strong>
+                                            Acfol<br><strong>ID:</strong> 24<br><strong>ATC:</strong>
+                                            B03BB01<br><strong>Substância Ativa/DCI:</strong> Ácido
+                                            fólico</span>Acfol</span>, <span class="med-tag"><span
+                                            class="tooltip-content"><strong>Produto:</strong>
+                                            Yodafar<br><strong>ID:</strong> 56433<br><strong>ATC:</strong>
+                                            H03CA<br><strong>Substância Ativa/DCI:</strong> Iodeto de
+                                            potássio</span>Yodafar</span>, <span class="med-tag"><span
+                                            class="tooltip-content"><strong>Produto:</strong> Progeffik
+                                            MG<br><strong>ID:</strong> -<br><strong>ATC:</strong>
+                                            G03DA04<br><strong>Substância Ativa/DCI:</strong>
+                                            Progesterona</span>progefik</span>, <span class="med-tag"><span
+                                            class="tooltip-content"><strong>Produto:</strong> -<br><strong>ID:</strong>
+                                            -<br><strong>ATC:</strong> B05XA05<br><strong>Substância Ativa/DCI:</strong>
+                                            Magnésio</span>magnesio</span>, <span class="med-tag"><span
+                                            class="tooltip-content"><strong>Produto:</strong>
+                                            Magnesiocard<br><strong>ID:</strong> 5280<br><strong>ATC:</strong>
+                                            B05XA05<br><strong>Substância Ativa/DCI:</strong> Aspartato de
+                                            magnésio</span>magnesiocard 3id</span>, <span class="med-tag"><span
+                                            class="tooltip-content"><strong>Produto:</strong> -<br><strong>ID:</strong>
+                                            -<br><strong>ATC:</strong> B05XA05<br><strong>Substância Ativa/DCI:</strong>
+                                            Magnésio</span>biolectra mg,</span> <span class="med-tag"><span
+                                            class="tooltip-content"><strong>Produto:</strong>
+                                            Legofer<br><strong>ID:</strong> 4949<br><strong>ATC:</strong>
+                                            B03AD03<br><strong>Substância Ativa/DCI:</strong> Proteínosuccinilato de
+                                            ferro</span>legofer</span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="id-col">7</td>
+                            <td>
+                                <div class="text-content"><span class="med-tag"><span
+                                            class="tooltip-content"><strong>Produto:</strong>
+                                            Symbicort<br><strong>ID:</strong> -<br><strong>ATC:</strong>
+                                            R03AK07<br><strong>Substância Ativa/DCI:</strong> Budesonida +
+                                            Formoterol</span>Symbicort 1x dia e em SOS,</span> <span
+                                        class="med-tag"><span class="tooltip-content"><strong>Produto:</strong>
+                                            Yodafar<br><strong>ID:</strong> 56433<br><strong>ATC:</strong>
+                                            H03CA<br><strong>Substância Ativa/DCI:</strong> Iodeto de
+                                            potássio</span>yodafar</span>, <span class="med-tag"><span
+                                            class="tooltip-content"><strong>Produto:</strong>
+                                            Folicil<br><strong>ID:</strong> 3600<br><strong>ATC:</strong>
+                                            B03BB01<br><strong>Substância Ativa/DCI:</strong> Ácido
+                                            fólico</span>folicil</span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="id-col">8</td>
+                            <td>
+                                <div class="text-content"><span class="med-tag"><span
+                                            class="tooltip-content"><strong>Produto:</strong>
+                                            Nausefe<br><strong>ID:</strong> 5915<br><strong>ATC:</strong>
+                                            A04AD<br><strong>Substância Ativa/DCI:</strong> Doxilamina + Dicloverina +
+                                            Piridoxina</span>nausefe</span>, <span class="med-tag"><span
+                                            class="tooltip-content"><strong>Produto:</strong>
+                                            Seretaide<br><strong>ID:</strong> -<br><strong>ATC:</strong>
+                                            R03AK06<br><strong>Substância Ativa/DCI:</strong> Fluticasona +
+                                            Salmeterol</span>seretaide - 2x por dia;</span> <span class="med-tag"><span
+                                            class="tooltip-content"><strong>Produto:</strong> -<br><strong>ID:</strong>
+                                            -<br><strong>ATC:</strong> B03AD03<br><strong>Substância Ativa/DCI:</strong>
+                                            Desloratadina</span>aerius;</span> <span class="med-tag unrecognized"><span
+                                            class="tooltip-content"><strong>Produto:</strong> -<br><strong>ID:</strong>
+                                            -<br><strong>ATC:</strong> -<br><strong>Substância Ativa/DCI:</strong>
+                                            -</span>gestacare</span>, <span class="med-tag"><span
+                                            class="tooltip-content"><strong>Produto:</strong>
+                                            Avamys<br><strong>ID:</strong> 42630<br><strong>ATC:</strong>
+                                            R01AD12<br><strong>Substância Ativa/DCI:</strong> Furoato de
+                                            fluticasona</span>avamys</span>, <span class="med-tag"><span
+                                            class="tooltip-content"><strong>Produto:</strong> -<br><strong>ID:</strong>
+                                            -<br><strong>ATC:</strong> R03AC13<br><strong>Substância Ativa/DCI:</strong>
+                                            Formoterol</span>Formoterol</span> <span class="med-tag"><span
+                                            class="tooltip-content"><strong>Produto:</strong> -<br><strong>ID:</strong>
+                                            -<br><strong>ATC:</strong> A07EA06<br><strong>Substância Ativa/DCI:</strong>
+                                            Budesonida</span>Budesonido 2id</span> <span class="med-tag"><span
+                                            class="tooltip-content"><strong>Produto:</strong>
+                                            Ventilan<br><strong>ID:</strong> -<br><strong>ATC:</strong>
+                                            R03AC02<br><strong>Substância Ativa/DCI:</strong> Salbutamol</span>Ventilan
+                                        SOS,</span> <span class="med-tag"><span
+                                            class="tooltip-content"><strong>Produto:</strong> Progeffik
+                                            MG<br><strong>ID:</strong> -<br><strong>ATC:</strong>
+                                            G03DA04<br><strong>Substância Ativa/DCI:</strong>
+                                            Progesterona</span>progeffik</span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="id-col">9</td>
+                            <td>
+                                <div class="text-content"><span class="med-tag"><span
+                                            class="tooltip-content"><strong>Produto:</strong> Ferro-Tardyferon
+                                            Fol<br><strong>ID:</strong> 8286<br><strong>ATC:</strong>
+                                            B03AD03<br><strong>Substância Ativa/DCI:</strong> Sulfato ferroso + Ácido
+                                            fólico</span>ferro-tardyferon fol;</span> <span class="med-tag"><span
+                                            class="tooltip-content"><strong>Produto:</strong>
+                                            Yodafar<br><strong>ID:</strong> 56433<br><strong>ATC:</strong>
+                                            H03CA<br><strong>Substância Ativa/DCI:</strong> Iodeto de
+                                            potássio</span>yodafar;</span> <span class="med-tag"><span
+                                            class="tooltip-content"><strong>Produto:</strong>
+                                            Paxium<br><strong>ID:</strong> -<br><strong>ATC:</strong>
+                                            N05BA02<br><strong>Substância Ativa/DCI:</strong>
+                                            Clorodiazepóxido</span>paxium (clorodiazepóxido) 5mg (dias alternados manhã
+                                        + 10mg noite);</span> <span class="med-tag"><span
+                                            class="tooltip-content"><strong>Produto:</strong> Concor
+                                            IC<br><strong>ID:</strong> 19214<br><strong>ATC:</strong>
+                                            C07AB07<br><strong>Substância Ativa/DCI:</strong> Bisoprolol</span>concor
+                                        2.5mg (1x dia)</span></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="id-col">10</td>
+                            <td>
+                                <div class="text-content"><span class="med-tag unrecognized"><span
+                                            class="tooltip-content"><strong>Produto:</strong> -<br><strong>ID:</strong>
+                                            -<br><strong>ATC:</strong> -<br><strong>Substância Ativa/DCI:</strong>
+                                            -</span>Ig anti D xx/xx/xxxx,</span> <span class="med-tag"><span
+                                            class="tooltip-content"><strong>Produto:</strong>
+                                            Folifer<br><strong>ID:</strong> 3601<br><strong>ATC:</strong>
+                                            B03AD03<br><strong>Substância Ativa/DCI:</strong> Ácido fólico +
+                                            Ferro</span>folifer 1x dia</span></div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+
+        <footer>
+            <p>Powered by Natural Language Processing &amp; Medical Terminology Binding</p>
+        </footer>
+    </div>
 </body>
 
 </html>
